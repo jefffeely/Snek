@@ -2,12 +2,19 @@
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_x1n8v"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node3D"]
 script = ExtResource("1_x1n8v")
 
 [node name="TickTimer" type="Timer" parent="."]
 wait_time = 0.14
 autostart = false
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="OrbitCamera" type="Camera3D" parent="."]
+current = true
+near = 0.05
+far = 400.0
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
